@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <progress class="progress w-56"></progress> -->
+
+    <main>
+        <div class="text-center bg-gradient-to-r from-orange-400 to-blue-300 p-5">
+            <div class="avatar">
+                <div class="mask mask-squircle w-24">
+                  <img src="WhatsApp Image 2024-06-01 at 18.34.57_f46ba54d.jpg" />
+                </div>
+              </div>
+              <div>
+                <h1 class="text-2xl lg:text-3xl ">You are welcomed by- <span class="text-2xl font-bold lg:text-4xl">Adian Sir.</span></h1>
+              </div>
+        </div>
+        <div class="hero bg-base-200 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse gap-48">
+                
+              <div class="text-center lg:text-left">
+                <h1 class="text-4xl font-bold text-center">BMI CHART</h1>
+                <p class="py-6 text-center">
+                    Underweight: BMI < 18.5 <br><br>
+                    Normal weight: BMI 18.5 - 24.9 <br><br>
+                    Overweight: BMI 25.0 - 29.9 <br><br>
+                    Obesity Class I (Mild obesity): BMI 30.0 - 34.9 <br><br>
+                    Obesity Class II (Moderate obesity): BMI 35.0 - 39.9 <br><br>
+                    Obesity Class III (Severe obesity): BMI ≥ 40
+                </p>
+              </div>
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Weight(kg)</span>
+                    </label>
+                    <input id="weight" type="text" placeholder="Enter your weight" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Height(ft)</span>
+                    </label>
+                    <input id="height" type="text" placeholder="Enter your height" class="input input-bordered" required />
+                   
+                  </div>
+                  <div>
+                    <label class="label">Your BMI :</label> 
+                    <div id="result" >0.00</div>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="btn-calculate" class="btn btn-primary">Calculate</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="home.js"></script>
+</body>
+</html>
