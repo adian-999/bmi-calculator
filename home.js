@@ -3,8 +3,10 @@ document.getElementById('btn-calculate').addEventListener('click',function(event
     const weight = document.getElementById('weight').value;
     const weightNumber = parseFloat(weight);
     const height = document.getElementById('height').value; 
+    const heightInch = height *12;
+    const finalHeight = heightInch*0.0254;
     const heightNumber = parseFloat(height);
-    const finalHeight = heightNumber*0.3048;
+    
     const bmi = weightNumber / (finalHeight * finalHeight);
     if(isNaN(weightNumber) || isNaN(heightNumber) || weightNumber <= 0 || heightNumber <= 0){
         document.getElementById('result').textContent='Please enter valid heigth and weight !';
