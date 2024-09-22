@@ -3,9 +3,11 @@ document.getElementById('btn-calculate').addEventListener('click',function(event
     const weight = document.getElementById('weight').value;
     const weightNumber = parseFloat(weight);
     const height = document.getElementById('height').value; 
-    const heightInch = height *12;
-    const finalHeight = heightInch*0.0254;
     const heightNumber = parseFloat(height);
+
+    const heightInch = heightNumber *12;
+    const finalHeight = heightInch*0.0254;
+    
     
     const bmi = weightNumber / (finalHeight * finalHeight);
     if(isNaN(weightNumber) || isNaN(heightNumber) || weightNumber <= 0 || heightNumber <= 0){
@@ -18,7 +20,7 @@ document.getElementById('btn-calculate').addEventListener('click',function(event
     let category;
     if (bmi < 18.5) {
         category = "Underweight";
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
+    } else if (bmi >= 18.5 && bmi <= 24.99) {
         category = "Normal weight";
     } else if (bmi >= 25 && bmi <= 29.9) {
         category = "Overweight";
